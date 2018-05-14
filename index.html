@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>API Reference</title>
+    <title>Events Manager API Doc</title>
 
     <style>
       .highlight table td { padding: 5px; }
@@ -201,7 +201,7 @@
       <script src="javascripts/all.js"></script>
   </head>
 
-  <body class="index" data-languages="[&quot;shell&quot;,&quot;ruby&quot;,&quot;python&quot;,&quot;javascript&quot;]">
+  <body class="index" data-languages="[&quot;javascript&quot;]">
     <a href="#" id="nav-button">
       <span>
         NAV
@@ -211,9 +211,6 @@
     <div class="toc-wrapper">
       <img src="images/logo.png" class="logo" alt="Logo" />
         <div class="lang-selector">
-              <a href="#" data-language-name="shell">shell</a>
-              <a href="#" data-language-name="ruby">ruby</a>
-              <a href="#" data-language-name="python">python</a>
               <a href="#" data-language-name="javascript">javascript</a>
         </div>
         <div class="search">
@@ -222,27 +219,97 @@
         <ul class="search-results"></ul>
       <div id="toc" class="toc-list-h1">
           <li>
-            <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
+            <a href="#introduction" class="toc-h1 toc-link" data-title="introduction">Introduction</a>
           </li>
           <li>
-            <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
-          </li>
-          <li>
-            <a href="#kittens" class="toc-h1 toc-link" data-title="Kittens">Kittens</a>
+            <a href="#development" class="toc-h1 toc-link" data-title="development">Development</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#get-all-kittens" class="toc-h2 toc-link" data-title="Get All Kittens">Get All Kittens</a>
-                  </li>
-                  <li>
-                    <a href="#get-a-specific-kitten" class="toc-h2 toc-link" data-title="Get a Specific Kitten">Get a Specific Kitten</a>
-                  </li>
-                  <li>
-                    <a href="#delete-a-specific-kitten" class="toc-h2 toc-link" data-title="Delete a Specific Kitten">Delete a Specific Kitten</a>
+                    <a href="#the-api-was-built-using" class="toc-h2 toc-link" data-title="the-api-was-built-using">The API was built using</a>
                   </li>
               </ul>
           </li>
           <li>
-            <a href="#errors" class="toc-h1 toc-link" data-title="Errors">Errors</a>
+            <a href="#authentication" class="toc-h1 toc-link" data-title="authentication">Authentication</a>
+          </li>
+          <li>
+            <a href="#installation" class="toc-h1 toc-link" data-title="installation">Installation</a>
+          </li>
+          <li>
+            <a href="#endpoints" class="toc-h1 toc-link" data-title="endpoints">Endpoints</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#user-endpoints" class="toc-h2 toc-link" data-title="user-endpoints">User Endpoints</a>
+                  </li>
+                  <li>
+                    <a href="#admin-endpoints" class="toc-h2 toc-link" data-title="admin-endpoints">Admin Endpoints</a>
+                  </li>
+                  <li>
+                    <a href="#center-endpoints" class="toc-h2 toc-link" data-title="center-endpoints">Center Endpoints</a>
+                  </li>
+                  <li>
+                    <a href="#event-endpoints" class="toc-h2 toc-link" data-title="event-endpoints">Event Endpoints</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#user-endpoints-examples" class="toc-h1 toc-link" data-title="user-endpoints-examples">User Endpoints Examples</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#user-signup" class="toc-h2 toc-link" data-title="user-signup">User Signup</a>
+                  </li>
+                  <li>
+                    <a href="#user-signin" class="toc-h2 toc-link" data-title="user-signin">User Signin</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#admin-endpoints-examples" class="toc-h1 toc-link" data-title="admin-endpoints-examples">Admin Endpoints Examples</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#add-center" class="toc-h2 toc-link" data-title="add-center">Add center</a>
+                  </li>
+                  <li>
+                    <a href="#edit-center" class="toc-h2 toc-link" data-title="edit-center">Edit center</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#center-endpoints-examples" class="toc-h1 toc-link" data-title="center-endpoints-examples">Center Endpoints Examples</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-latest-centers" class="toc-h2 toc-link" data-title="get-latest-centers">Get latest centers</a>
+                  </li>
+                  <li>
+                    <a href="#get-a-center" class="toc-h2 toc-link" data-title="get-a-center">Get a center</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#event-endpoints-examples" class="toc-h1 toc-link" data-title="event-endpoints-examples">Event Endpoints Examples</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#add-event" class="toc-h2 toc-link" data-title="add-event">Add event</a>
+                  </li>
+                  <li>
+                    <a href="#edit-an-event" class="toc-h2 toc-link" data-title="edit-an-event">Edit an event</a>
+                  </li>
+                  <li>
+                    <a href="#delete-an-event" class="toc-h2 toc-link" data-title="delete-an-event">Delete an event</a>
+                  </li>
+                  <li>
+                    <a href="#get-an-event" class="toc-h2 toc-link" data-title="get-an-event">Get an event</a>
+                  </li>
+                  <li>
+                    <a href="#get-all-events" class="toc-h2 toc-link" data-title="get-all-events">Get all events</a>
+                  </li>
+                  <li>
+                    <a href="#get-three-latest-events" class="toc-h2 toc-link" data-title="get-three-latest-events">Get three latest events</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#errors" class="toc-h1 toc-link" data-title="errors">Errors</a>
           </li>
       </div>
         <ul class="toc-footer">
@@ -254,188 +321,1085 @@
       <div class="dark-box"></div>
       <div class="content">
         <h1 id='introduction'>Introduction</h1>
-<p>Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.</p>
+<p>Welcome to the Events Manager API! </p>
 
-<p>We have language bindings in Shell, Ruby, and Python! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.</p>
+<p>Events Manager is a platform that helps manage creation and development of events such as conferences, ceremonies, weddings, formal parties, concerts, or conventions and as well provide centers to host these events. Suppose a user has an event coming up, He/She can post it on Events Manager and get a center.</p>
 
-<p>This example API documentation page was created with <a href="https://github.com/lord/slate">Slate</a>. Feel free to edit it and use it as a base for your own API&#39;s documentation.</p>
+<p>This API provides you with all the endpoints you need to create your own version of the Events Manager application</p>
+
+<p>To view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.</p>
+
+<p>This Events Manager API documentation page was created with <a href="https://github.com/lord/slate">Slate</a>.</p>
+<h1 id='development'>Development</h1><h3 id='the-api-was-built-using'>The API was built using</h3>
+<ul>
+<li>Node - <a href="https://nodejs.org/en/">Node</a></li>
+<li>ExpressJs - <a href="https://expressjs.com/">Express</a></li>
+<li>PostgreSql - <a href="https://www.postgresql.org/">PostgreSql</a></li>
+<li>Sequelize orm - <a href="http://docs.sequelizejs.com/manual/installation/getting-started">Sequelize orm</a></li>
+</ul>
 <h1 id='authentication'>Authentication</h1>
-<blockquote>
-<p>To authorize, use this code:</p>
-</blockquote>
-<pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
+<p>Authentication has been put in place for secured routes. Most of the routes in this endpoints are secured and a user will need to provide an authourization token to access them. The token is only provided when a user creates an account or signs in to use the application. Read on to know how the token is used for requests:</p>
 
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
+<!-- > To authorize, use this code:
 
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-</code></pre><pre class="highlight shell tab-shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
-curl <span class="s2">"api_endpoint_here"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
+```ruby
+require 'kittn'
 
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-</code></pre>
-<blockquote>
-<p>Make sure to replace <code>meowmeowmeow</code> with your API key.</p>
-</blockquote>
+api = Kittn::APIClient.authorize!('meowmeowmeow')
+```
 
-<p>Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our <a href="http://example.com/developers">developer portal</a>.</p>
+```python
+import kittn
 
-<p>Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:</p>
+api = kittn.authorize('meowmeowmeow')
+```
 
-<p><code>Authorization: meowmeowmeow</code></p>
+```shell
+# With shell, you can just pass the correct header with each request
+curl "api_endpoint_here"
+  -H "Authorization: meowmeowmeow"
+```
+
+```javascript
+const kittn = require('kittn');
+
+let api = kittn.authorize('meowmeowmeow');
+```
+
+> Make sure to replace `meowmeowmeow` with your API key.
+
+Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our [developer portal](http://example.com/developers).
+
+Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:
+
+`Authorization: meowmeowmeow`
 
 <aside class="notice">
 You must replace <code>meowmeowmeow</code> with your personal API key.
-</aside>
-<h1 id='kittens'>Kittens</h1><h2 id='get-all-kittens'>Get All Kittens</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
-</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">kittens</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="nx">get</span><span class="p">();</span>
+</aside> -->
+<h1 id='installation'>Installation</h1>
+<ul>
+<li>Install  <code>node</code> and <code>postgres</code> </li>
+<li>Clone the repository: 
+<code>
+&gt; $ git clone https://github.com/Abudu-Samuel/Events-Manager
+</code></li>
+<li>Change directory into events-manager directory
+<code>
+&gt; $ cd events-manager
+</code></li>
+<li>Install dependencies 
+<code>
+&gt; $ npm install
+</code></li>
+<li>Once installation is done, create a <code>.env</code> file and fill it with the neccessary environment variables.</li>
+<li>Create a database to be used with the application</li>
+<li>Migrate database by running
+<code>sh
+&gt; $ sequelize db:migrate
+</code></li>
+<li>Start app
+<code>sh
+&gt; $ npm start:dev
+</code></li>
+<li>Consume endpoints using postman <a href="https://www.getpostman.com/">Postman</a></li>
+</ul>
+<h1 id='endpoints'>Endpoints</h1><h3 id='user-endpoints'>User Endpoints</h3>
+<table><thead>
+<tr>
+<th>Summary</th>
+<th>Endpoint</th>
+<th>Description</th>
+<th>Request Method</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>SignUp</td>
+<td>api/v1/users</td>
+<td>This creates a new user</td>
+<td>POST</td>
+</tr>
+<tr>
+<td>SignIn</td>
+<td>api/v1/users/login</td>
+<td>This logs an existing user in to the application. This is true for both admin and normal users</td>
+<td>POST</td>
+</tr>
+</tbody></table>
+<h3 id='admin-endpoints'>Admin Endpoints</h3>
+<table><thead>
+<tr>
+<th>Summary</th>
+<th>Endpoint</th>
+<th>Description</th>
+<th>Request Method</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Add Center</td>
+<td>api/v1/centers</td>
+<td>This allows an admin to create a center to the database.</td>
+<td>POST</td>
+</tr>
+<tr>
+<td>Edit Center</td>
+<td>api/v1/centers/center/centerid</td>
+<td>This allows an admin to edit a center</td>
+<td>PUT</td>
+</tr>
+</tbody></table>
+<h3 id='center-endpoints'>Center Endpoints</h3>
+<table><thead>
+<tr>
+<th>Summary</th>
+<th>Endpoint</th>
+<th>Description</th>
+<th>Request Method</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Newly added centers</td>
+<td>api/v1/centers/latest</td>
+<td>This gets the three latest centers added to the database.</td>
+<td>GET</td>
+</tr>
+<tr>
+<td>Get Centers</td>
+<td>api/v1/centers/</td>
+<td>This gets all centers in the database</td>
+<td>GET</td>
+</tr>
+<tr>
+<td>Get A Center</td>
+<td>api/v1/centers/center/centerid</td>
+<td>This gets a single center in the database</td>
+<td>GET</td>
+</tr>
+</tbody></table>
+<h3 id='event-endpoints'>Event Endpoints</h3>
+<table><thead>
+<tr>
+<th>Summary</th>
+<th>Endpoint</th>
+<th>Description</th>
+<th>Request Method</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Add Event</td>
+<td>api/v1/events/</td>
+<td>This allows a user to add an event to the database.</td>
+<td>POST</td>
+</tr>
+<tr>
+<td>Newly added events</td>
+<td>api/v1/events/latest</td>
+<td>This gets the three latest events added to the database</td>
+<td>GET</td>
+</tr>
+<tr>
+<td>Get User Event(s)</td>
+<td>api/v1/events/user/events</td>
+<td>This gets event created by a specific user</td>
+<td>GET</td>
+</tr>
+<tr>
+<td>Edit Event</td>
+<td>api/v1/events/event/eventid</td>
+<td>This allows a user to edit an event</td>
+<td>PUT</td>
+</tr>
+<tr>
+<td>Get An Event</td>
+<td>api/v1/events/event/eventid</td>
+<td>This gets a single event in the database</td>
+<td>GET</td>
+</tr>
+<tr>
+<td>Get Events</td>
+<td>api/v1/events</td>
+<td>This gets all events in the database</td>
+<td>GET</td>
+</tr>
+<tr>
+<td>Delete Event</td>
+<td>api/v1/events/event/eventid</td>
+<td>This allows a user to delete event(s) he/she created</td>
+<td>DELETE</td>
+</tr>
+<tr>
+<td>Slated Event(s)</td>
+<td>api/vi/events/center/eventid</td>
+<td>This gets event(s) slated for a single center</td>
+<td>GET</td>
+</tr>
+</tbody></table>
+<h1 id='user-endpoints-examples'>User Endpoints Examples</h1><h2 id='user-signup'>User Signup</h2><pre class="highlight javascript tab-javascript"><code>
 </code></pre>
 <blockquote>
-<p>The above command returns JSON structured like this:</p>
+<p>Request Body</p>
 </blockquote>
-<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+<pre class="highlight json tab-json"><code><span class="w">
   </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fluffums"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"calico"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
+    </span><span class="s2">"firstname"</span><span class="p">:</span><span class="w"> </span><span class="s2">"testing"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"lastname"</span><span class="p">:</span><span class="w"> </span><span class="s2">"example"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"testing@example.com"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"testexamp"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"password"</span><span class="p">:</span><span class="w"> </span><span class="s2">"password"</span><span class="w">
   </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
+
 </span></code></pre>
-<p>This endpoint retrieves all kittens.</p>
-<h3 id='http-request'>HTTP Request</h3>
-<p><code>GET http://example.com/api/kittens</code></p>
+<blockquote>
+<p>Response Body</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"responseData"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Account Created"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"testexamp"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"testing@example.com"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"firstname"</span><span class="p">:</span><span class="w"> </span><span class="s2">"testing"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"lastname"</span><span class="p">:</span><span class="w"> </span><span class="s2">"example"</span><span class="p">,</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+
+</span></code></pre><h3 id='request'>Request</h3>
+<ul>
+<li>Endpoint: <code>Post (&#39;/users&#39;)</code></li>
+<li>Body: <code>Application/json</code></li>
+</ul>
 <h3 id='query-parameters'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
-<th>Default</th>
-<th>Description</th>
+<th>Required</th>
+<th>Validation</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>include_cats</td>
-<td>false</td>
-<td>If set to true, the result will also include cats.</td>
-</tr>
-<tr>
-<td>available</td>
+<td>Firstname</td>
 <td>true</td>
-<td>If set to false, the result will include kittens that have already been adopted.</td>
+<td>Must be a string and must not be less than three characters.</td>
+</tr>
+<tr>
+<td>Lastname</td>
+<td>true</td>
+<td>Must be a string and must not be less than three characters.</td>
+</tr>
+<tr>
+<td>Username</td>
+<td>true</td>
+<td>Must be a string and must not be less than three characters.</td>
+</tr>
+<tr>
+<td>Email</td>
+<td>true</td>
+<td>Must be a valid email</td>
+</tr>
+<tr>
+<td>Password</td>
+<td>true</td>
+<td>Must not be less than 5 characters long</td>
 </tr>
 </tbody></table>
-
-<aside class="success">
-Remember — a happy kitten is an authenticated kitten!
-</aside>
-<h2 id='get-a-specific-kitten'>Get a Specific Kitten</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+<h3 id='response'>Response</h3>
+<ul>
+<li>Status: 201: created</li>
+<li>Body: <code>Application/json</code></li>
+</ul>
+<h3 id='error-status-codes'>Error status codes</h3>
+<ul>
+<li>400 - Bad Request</li>
+<li>409 - Conflict</li>
+<li>500 - Internal server error</li>
+</ul>
+<h2 id='user-signin'>User Signin</h2><pre class="highlight javascript tab-javascript"><code>
 </code></pre>
 <blockquote>
-<p>The above command returns JSON structured like this:</p>
+<p>Request Body</p>
 </blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>This endpoint retrieves a specific kitten.</p>
+<pre class="highlight json tab-json"><code><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"testexamp"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"password"</span><span class="p">:</span><span class="w"> </span><span class="s2">"password"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 
-<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
-<h3 id='http-request-2'>HTTP Request</h3>
-<p><code>GET http://example.com/kittens/&lt;ID&gt;</code></p>
-<h3 id='url-parameters'>URL Parameters</h3>
+</span></code></pre>
+<blockquote>
+<p>Response Body</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="w">
+  </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Sign in Successful!"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJleGFtcGxlQGV4YW1wbGUuY29tIiwibWVtYmVyc2hpcCI6ImJyb256ZSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNTE2ODgwMzIyLCJleHAiOjE1MTY5NjY3MjJ9.XqZL8Cv3t4x53mnQ-9GfGayUFxMGS2hfdjbjbjeIFEw"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+
+</span></code></pre><h3 id='request-2'>Request</h3>
+<ul>
+<li>Endpoint: <code>Post (&#39;/users/login&#39;)</code></li>
+<li>Body: <code>Application/json</code></li>
+</ul>
+<h3 id='query-parameters-2'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
-<th>Description</th>
+<th>Required</th>
+<th>Validation</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>ID</td>
-<td>The ID of the kitten to retrieve</td>
+<td>Username</td>
+<td>true</td>
+<td>Must be a string and must not be less than three characters.</td>
+</tr>
+<tr>
+<td>Password</td>
+<td>true</td>
+<td>Must not be less than 5 characters long</td>
 </tr>
 </tbody></table>
-<h2 id='delete-a-specific-kitten'>Delete a Specific Kitten</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span>
-  -X DELETE
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+<h3 id='response-2'>Response</h3>
+<ul>
+<li>Status: 200: Ok</li>
+<li>Body: <code>Application/json</code></li>
+</ul>
+<h3 id='error-status-codes-2'>Error status codes</h3>
+<ul>
+<li>400 - Bad Request</li>
+<li>401 - Unauthorized</li>
+<li>500 - Internal server error</li>
+</ul>
+<h1 id='admin-endpoints-examples'>Admin Endpoints Examples</h1><h2 id='add-center'>Add center</h2><pre class="highlight javascript tab-javascript"><code>
 </code></pre>
 <blockquote>
-<p>The above command returns JSON structured like this:</p>
+<p>Request Header</p>
 </blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"deleted"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">":("</span><span class="w">
-</span><span class="p">}</span><span class="w">
+<pre class="highlight json tab-json"><code><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"authorization"</span><span class="p">:</span><span class="w"> </span><span class="s2">"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJleGFtcGxlQGV4YW1wbGUuY29tIiwibWVtYmVyc2hpcCI6ImJyb256ZSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNTE2ODgwMzIyLCJleHAiOjE1MTY5NjY3MjJ9.XqZL8Cv3t4x53mnQ-9GfGayUFxMGS2hfdjbjbjeIFEw"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+
 </span></code></pre>
-<p>This endpoint deletes a specific kitten.</p>
-<h3 id='http-request-3'>HTTP Request</h3>
-<p><code>DELETE http://example.com/kittens/&lt;ID&gt;</code></p>
-<h3 id='url-parameters-2'>URL Parameters</h3>
+<blockquote>
+<p>Request Body</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="w">
+  </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Grand Hall"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"capacity"</span><span class="p">:</span><span class="w"> </span><span class="mi">300</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"location"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ikeja"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="mf">500000.000</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Lagos"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Awesome Event Center"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://image.com"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"isAvailable"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+
+</span></code></pre>
+<blockquote>
+<p>Response Body</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="w">
+  </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Center created Successfully"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Grand Hall"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"capacity"</span><span class="p">:</span><span class="w"> </span><span class="mi">300</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"location"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ikeja"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="mf">500000.000</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Lagos"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Awesome Event Center"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://image.com"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"isAvailable"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+
+</span></code></pre><h3 id='request-3'>Request</h3>
+<ul>
+<li>Endpoint: <code>Post (&#39;/centers&#39;)</code></li>
+<li>Body: <code>Application/json</code></li>
+</ul>
+<h3 id='query-parameters-3'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
-<th>Description</th>
+<th>Required</th>
+<th>Validation</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>ID</td>
-<td>The ID of the kitten to delete</td>
+<td>Name</td>
+<td>true</td>
+<td>Must be a string</td>
+</tr>
+<tr>
+<td>Capacity</td>
+<td>true</td>
+<td>Must be a number</td>
+</tr>
+<tr>
+<td>Location</td>
+<td>true</td>
+<td>Must be a string</td>
+</tr>
+<tr>
+<td>Price</td>
+<td>true</td>
+<td>Must be a number</td>
+</tr>
+<tr>
+<td>State</td>
+<td>true</td>
+<td>Must be a string</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>true</td>
+<td>Must be a string</td>
+</tr>
+<tr>
+<td>Image</td>
+<td>true</td>
+<td>Must be a string</td>
+</tr>
+<tr>
+<td>isAvailable</td>
+<td>true</td>
+<td>Must be a boolean</td>
 </tr>
 </tbody></table>
+<h3 id='response-3'>Response</h3>
+<ul>
+<li>Status: 201: created</li>
+<li>Body: <code>Application/json</code></li>
+</ul>
+<h3 id='error-status-codes-3'>Error status codes</h3>
+<ul>
+<li>400 - Bad Request</li>
+<li>401 - Unauthorized</li>
+</ul>
+<h2 id='edit-center'>Edit center</h2><pre class="highlight javascript tab-javascript"><code>
+</code></pre>
+<blockquote>
+<p>Request Header</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"authorization"</span><span class="p">:</span><span class="w"> </span><span class="s2">"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJleGFtcGxlQGV4YW1wbGUuY29tIiwibWVtYmVyc2hpcCI6ImJyb256ZSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNTE2ODgwMzIyLCJleHAiOjE1MTY5NjY3MjJ9.XqZL8Cv3t4x53mnQ-9GfGayUFxMGS2hfdjbjbjeIFEw"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+
+</span></code></pre>
+<blockquote>
+<p>Request Body</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="w">
+  </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Grand Hall Updated"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"capacity"</span><span class="p">:</span><span class="w"> </span><span class="mi">300</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"location"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ikeja"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="mf">500000.000</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Lagos"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Awesome Event Center"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://image.com"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"isAvailable"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+
+</span></code></pre>
+<blockquote>
+<p>Response Body</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="w">
+  </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Center modification is Successfully"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Grand Hall Updated"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"capacity"</span><span class="p">:</span><span class="w"> </span><span class="mi">300</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"location"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ikeja"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="mf">500000.000</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Lagos"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Awesome Event Center"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://image.com"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"isAvailable"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+
+</span></code></pre><h3 id='request-4'>Request</h3>
+<ul>
+<li>Endpoint: <code>Post (&#39;/centers/center/centerid&#39;)</code></li>
+<li>Body: <code>Application/json</code></li>
+</ul>
+<h3 id='query-parameters-4'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Validation</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Name</td>
+<td>true</td>
+<td>Must be a string</td>
+</tr>
+<tr>
+<td>Capacity</td>
+<td>true</td>
+<td>Must be a number</td>
+</tr>
+<tr>
+<td>Location</td>
+<td>true</td>
+<td>Must be a string</td>
+</tr>
+<tr>
+<td>Price</td>
+<td>true</td>
+<td>Must be a number</td>
+</tr>
+<tr>
+<td>State</td>
+<td>true</td>
+<td>Must be a string</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>true</td>
+<td>Must be a string</td>
+</tr>
+<tr>
+<td>Image</td>
+<td>true</td>
+<td>Must be a string</td>
+</tr>
+<tr>
+<td>isAvailable</td>
+<td>true</td>
+<td>Must be a boolean</td>
+</tr>
+</tbody></table>
+<h3 id='response-4'>Response</h3>
+<ul>
+<li>Status: 201: created</li>
+<li>Body: <code>Application/json</code></li>
+</ul>
+<h3 id='error-status-codes-4'>Error status codes</h3>
+<ul>
+<li>400 - Bad Request</li>
+<li>401 - Unauthorized</li>
+</ul>
+<h1 id='center-endpoints-examples'>Center Endpoints Examples</h1><h2 id='get-latest-centers'>Get latest centers</h2><pre class="highlight javascript tab-javascript"><code>
+</code></pre>
+<blockquote>
+<p>Response Body</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="w">
+  </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Centers Found"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"foundCenters"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Grand Hall"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"capacity"</span><span class="p">:</span><span class="w"> </span><span class="mi">300</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"location"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ikeja"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="mf">500000.000</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Lagos"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Awesome Event Center"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://image.com"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"isAvailable"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+           </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ovation Hall"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"capacity"</span><span class="p">:</span><span class="w"> </span><span class="mi">300</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"location"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ipaja"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="mf">500000.000</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Lagos"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Awesome Event Center"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://image.com"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"isAvailable"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+           </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Lively Hall"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"capacity"</span><span class="p">:</span><span class="w"> </span><span class="mi">300</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"location"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Agege"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="mf">500000.000</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Lagos"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Awesome Event Center"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://image.com"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"isAvailable"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">]</span><span class="w">
+
+  </span><span class="p">}</span><span class="w">
+
+</span></code></pre><h3 id='request-5'>Request</h3>
+<ul>
+<li>Endpoint: <code>Get (&#39;/centers/latest&#39;)</code></li>
+<li>Body: <code>Application/json</code></li>
+</ul>
+<h3 id='response-5'>Response</h3>
+<ul>
+<li>Status: 200: ok</li>
+<li>Body: <code>Application/json</code></li>
+</ul>
+<h3 id='error-status-codes-5'>Error status codes</h3>
+<ul>
+<li>500 - Internal server error</li>
+</ul>
+<h2 id='get-a-center'>Get a center</h2><pre class="highlight javascript tab-javascript"><code>
+</code></pre>
+<blockquote>
+<p>Request Header</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"authorization"</span><span class="p">:</span><span class="w"> </span><span class="s2">"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJleGFtcGxlQGV4YW1wbGUuY29tIiwibWVtYmVyc2hpcCI6ImJyb256ZSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNTE2ODgwMzIyLCJleHAiOjE1MTY5NjY3MjJ9.XqZL8Cv3t4x53mnQ-9GfGayUFxMGS2hfdjbjbjeIFEw"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+
+</span></code></pre>
+<blockquote>
+<p>Response Body</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="w">
+  </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Center found"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"center"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Grand Hall Updated"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"capacity"</span><span class="p">:</span><span class="w"> </span><span class="mi">300</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"location"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ikeja"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="mf">500000.000</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Lagos"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Awesome Event Center"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://image.com"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"isAvailable"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+
+</span></code></pre><h3 id='request-6'>Request</h3>
+<ul>
+<li>Endpoint: <code>Get (&#39;/centers/center/centerid&#39;)</code></li>
+<li>Body: <code>Application/json</code></li>
+</ul>
+<h3 id='response-6'>Response</h3>
+<ul>
+<li>Status: 200: Ok</li>
+<li>Body: <code>Application/json</code></li>
+</ul>
+<h3 id='error-status-codes-6'>Error status codes</h3>
+<ul>
+<li>500 - Internal server error</li>
+</ul>
+<h1 id='event-endpoints-examples'>Event Endpoints Examples</h1><h2 id='add-event'>Add event</h2><pre class="highlight javascript tab-javascript"><code>
+</code></pre>
+<blockquote>
+<p>Request Header</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"authorization"</span><span class="p">:</span><span class="w"> </span><span class="s2">"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJleGFtcGxlQGV4YW1wbGUuY29tIiwibWVtYmVyc2hpcCI6ImJyb256ZSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNTE2ODgwMzIyLCJleHAiOjE1MTY5NjY3MjJ9.XqZL8Cv3t4x53mnQ-9GfGayUFxMGS2hfdjbjbjeIFEw"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+
+</span></code></pre>
+<blockquote>
+<p>Request Body</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="w">
+  </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"userId"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"centerId"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Youth Elevation Event"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-12-05"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Educational"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Awesome Event For youths"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://image.com"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+
+</span></code></pre>
+<blockquote>
+<p>Response Body</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="w">
+  </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Event Created"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"createdEvent"</span><span class="p">:</span><span class="w"> 
+        </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"userId"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"centerId"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Youth Elevation Event"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-12-05"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Educational"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Awesome Event For youths"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://image.com"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+
+</span></code></pre><h3 id='request-7'>Request</h3>
+<ul>
+<li>Endpoint: <code>Post (&#39;/events&#39;)</code></li>
+<li>Body: <code>Application/json</code></li>
+</ul>
+<h3 id='query-parameters-5'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Validation</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Title</td>
+<td>true</td>
+<td>Must be a string</td>
+</tr>
+<tr>
+<td>Date</td>
+<td>true</td>
+<td>Must be a string</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>true</td>
+<td>Must be a string</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>true</td>
+<td>Must be a string</td>
+</tr>
+<tr>
+<td>Image</td>
+<td>true</td>
+<td>Must be a string</td>
+</tr>
+</tbody></table>
+<h3 id='response-7'>Response</h3>
+<ul>
+<li>Status: 201: created</li>
+<li>Body: <code>Application/json</code></li>
+</ul>
+<h3 id='error-status-codes-7'>Error status codes</h3>
+<ul>
+<li>400 - Bad request</li>
+<li>500 - Internal server error</li>
+</ul>
+<h2 id='edit-an-event'>Edit an event</h2><pre class="highlight javascript tab-javascript"><code>
+</code></pre>
+<blockquote>
+<p>Request Header</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"authorization"</span><span class="p">:</span><span class="w"> </span><span class="s2">"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJleGFtcGxlQGV4YW1wbGUuY29tIiwibWVtYmVyc2hpcCI6ImJyb256ZSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNTE2ODgwMzIyLCJleHAiOjE1MTY5NjY3MjJ9.XqZL8Cv3t4x53mnQ-9GfGayUFxMGS2hfdjbjbjeIFEw"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+
+</span></code></pre>
+<blockquote>
+<p>Request Body</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="w">
+  </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"userId"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"centerId"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Youth Elevation Event updated"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-12-05"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Educational"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Awesome Event For youths"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://image.com"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+
+</span></code></pre>
+<blockquote>
+<p>Response Body</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="w">
+  </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Event modification is successful"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"updatedEvent"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"userId"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"centerId"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Youth Elevation Event updated"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-12-05"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Educational"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Awesome Event For youths"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://image.com"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+
+</span></code></pre><h3 id='request-8'>Request</h3>
+<ul>
+<li>Endpoint: <code>Put (&#39;/events/event/eventid&#39;)</code></li>
+<li>Body: <code>Application/json</code></li>
+</ul>
+<h3 id='query-parameters-6'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Validation</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Title</td>
+<td>true</td>
+<td>Must be a string</td>
+</tr>
+<tr>
+<td>Date</td>
+<td>true</td>
+<td>Must be a string</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>true</td>
+<td>Must be a string</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>true</td>
+<td>Must be a string</td>
+</tr>
+<tr>
+<td>Image</td>
+<td>true</td>
+<td>Must be a string</td>
+</tr>
+</tbody></table>
+<h3 id='response-8'>Response</h3>
+<ul>
+<li>Status: 200: Ok</li>
+<li>Body: <code>Application/json</code></li>
+</ul>
+<h3 id='error-status-codes-8'>Error status codes</h3>
+<ul>
+<li>400 - Bad request</li>
+<li>422 - Unauthorized</li>
+<li>500 - Internal server error</li>
+</ul>
+<h2 id='delete-an-event'>Delete an event</h2><pre class="highlight javascript tab-javascript"><code>
+</code></pre>
+<blockquote>
+<p>Request Header</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"authorization"</span><span class="p">:</span><span class="w"> </span><span class="s2">"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJleGFtcGxlQGV4YW1wbGUuY29tIiwibWVtYmVyc2hpcCI6ImJyb256ZSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNTE2ODgwMzIyLCJleHAiOjE1MTY5NjY3MjJ9.XqZL8Cv3t4x53mnQ-9GfGayUFxMGS2hfdjbjbjeIFEw"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+
+</span></code></pre>
+<blockquote>
+<p>Response Body</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="w">
+  </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Event deleted"</span><span class="p">,</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+
+</span></code></pre><h3 id='request-9'>Request</h3>
+<ul>
+<li>Endpoint: <code>Delete (&#39;/events/event/eventid&#39;)</code></li>
+<li>Body: <code>Application/json</code></li>
+</ul>
+<h3 id='response-9'>Response</h3>
+<ul>
+<li>Status: 200: Ok</li>
+<li>Body: <code>Application/json</code></li>
+</ul>
+<h3 id='error-status-codes-9'>Error status codes</h3>
+<ul>
+<li>422 - Unauthorized</li>
+<li>500 - Internal server error</li>
+</ul>
+<h2 id='get-an-event'>Get an event</h2><pre class="highlight javascript tab-javascript"><code>
+</code></pre>
+<blockquote>
+<p>Request Header</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"authorization"</span><span class="p">:</span><span class="w"> </span><span class="s2">"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJleGFtcGxlQGV4YW1wbGUuY29tIiwibWVtYmVyc2hpcCI6ImJyb256ZSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNTE2ODgwMzIyLCJleHAiOjE1MTY5NjY3MjJ9.XqZL8Cv3t4x53mnQ-9GfGayUFxMGS2hfdjbjbjeIFEw"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+
+
+</span></code></pre>
+<blockquote>
+<p>Response Body</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="w">
+  </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Event Found"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"Event"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"userId"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"centerId"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Youth Elevation Event updated"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-12-05"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Educational"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Awesome Event For youths"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://image.com"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+
+</span></code></pre><h3 id='request-10'>Request</h3>
+<ul>
+<li>Endpoint: <code>Get (&#39;/events/event/eventid&#39;)</code></li>
+<li>Body: <code>Application/json</code></li>
+</ul>
+<h3 id='response-10'>Response</h3>
+<ul>
+<li>Status: 200: Ok</li>
+<li>Body: <code>Application/json</code></li>
+</ul>
+<h3 id='error-status-codes-10'>Error status codes</h3>
+<ul>
+<li>500 - Internal server error</li>
+</ul>
+<h2 id='get-all-events'>Get all events</h2><pre class="highlight javascript tab-javascript"><code>
+</code></pre>
+<blockquote>
+<p>Request Header</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"authorization"</span><span class="p">:</span><span class="w"> </span><span class="s2">"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJleGFtcGxlQGV4YW1wbGUuY29tIiwibWVtYmVyc2hpcCI6ImJyb256ZSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNTE2ODgwMzIyLCJleHAiOjE1MTY5NjY3MjJ9.XqZL8Cv3t4x53mnQ-9GfGayUFxMGS2hfdjbjbjeIFEw"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+
+</span></code></pre>
+<blockquote>
+<p>Response Body</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="w">
+  </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Events Found"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"Event"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"userId"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"centerId"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Youth Elevation Event updated"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-12-05"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Educational"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Awesome Event For youths"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://image.com"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"userId"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"centerId"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Coming of the kings"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-12-05"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Educational"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Awesome Event For youths"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://image.com"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"userId"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"centerId"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Make it right"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-12-05"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Educational"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Awesome Event For youths"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://image.com"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"userId"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"centerId"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"You and me conference"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-12-05"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Educational"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Awesome Event For youths"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://image.com"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+      </span><span class="p">]</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+
+</span></code></pre><h3 id='request-11'>Request</h3>
+<ul>
+<li>Endpoint: <code>Get (&#39;/events/&#39;)</code></li>
+<li>Body: <code>Application/json</code></li>
+</ul>
+<h3 id='response-11'>Response</h3>
+<ul>
+<li>Status: 200: Ok</li>
+<li>Body: <code>Application/json</code></li>
+</ul>
+<h3 id='error-status-codes-11'>Error status codes</h3>
+<ul>
+<li>500 - Internal server error</li>
+</ul>
+<h2 id='get-three-latest-events'>Get three latest events</h2><pre class="highlight javascript tab-javascript"><code>
+</code></pre>
+<blockquote>
+<p>Request Header</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"authorization"</span><span class="p">:</span><span class="w"> </span><span class="s2">"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJleGFtcGxlQGV4YW1wbGUuY29tIiwibWVtYmVyc2hpcCI6ImJyb256ZSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNTE2ODgwMzIyLCJleHAiOjE1MTY5NjY3MjJ9.XqZL8Cv3t4x53mnQ-9GfGayUFxMGS2hfdjbjbjeIFEw"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+
+</span></code></pre>
+<blockquote>
+<p>Response Body</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="w">
+  </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Events Found"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"Event"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"userId"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"centerId"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"You and me conference"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-12-05"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Educational"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Awesome Event For youths"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://image.com"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"userId"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"centerId"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Make it right"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-12-05"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Educational"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Awesome Event For youths"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://image.com"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"userId"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"centerId"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Coming of the kings"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-12-05"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Educational"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Awesome Event For youths"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://image.com"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+      </span><span class="p">]</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+
+</span></code></pre><h3 id='request-12'>Request</h3>
+<ul>
+<li>Endpoint: <code>Get (&#39;/events/latest&#39;)</code></li>
+<li>Body: <code>Application/json</code></li>
+</ul>
+<h3 id='response-12'>Response</h3>
+<ul>
+<li>Status: 200: Ok</li>
+<li>Body: <code>Application/json</code></li>
+</ul>
+<h3 id='error-status-codes-12'>Error status codes</h3>
+<ul>
+<li>500 - Internal server error</li>
+</ul>
 <h1 id='errors'>Errors</h1>
-<aside class="notice">This error section is stored in a separate file in `includes/_errors.md`. Slate allows you to optionally separate out your docs into many files...just save them to the `includes` folder and add them to the top of your `index.md`'s frontmatter. Files are included in the order listed.</aside>
-
-<p>The Kittn API uses the following error codes:</p>
+<aside class="notice">
+These are the error codes that were used while creating this events manager API endpoints.
+</aside>
 
 <table><thead>
 <tr>
@@ -445,56 +1409,29 @@ Remember — a happy kitten is an authenticated kitten!
 </thead><tbody>
 <tr>
 <td>400</td>
-<td>Bad Request -- Your request sucks.</td>
+<td>Bad Request -- Your request is invalid or a parameter is missing in your request params.</td>
 </tr>
 <tr>
 <td>401</td>
-<td>Unauthorized -- Your API key is wrong.</td>
-</tr>
-<tr>
-<td>403</td>
-<td>Forbidden -- The kitten requested is hidden for administrators only.</td>
+<td>Unauthorized -- Your authorization key is invalid.</td>
 </tr>
 <tr>
 <td>404</td>
-<td>Not Found -- The specified kitten could not be found.</td>
+<td>Not Found -- The specified event/center could not be found.</td>
 </tr>
 <tr>
-<td>405</td>
-<td>Method Not Allowed -- You tried to access a kitten with an invalid method.</td>
-</tr>
-<tr>
-<td>406</td>
-<td>Not Acceptable -- You requested a format that isn&#39;t json.</td>
-</tr>
-<tr>
-<td>410</td>
-<td>Gone -- The kitten requested has been removed from our servers.</td>
-</tr>
-<tr>
-<td>418</td>
-<td>I&#39;m a teapot.</td>
-</tr>
-<tr>
-<td>429</td>
-<td>Too Many Requests -- You&#39;re requesting too many kittens! Slow down!</td>
+<td>422</td>
+<td>Unprocessed entity -- Unable to process the contained instructions</td>
 </tr>
 <tr>
 <td>500</td>
 <td>Internal Server Error -- We had a problem with our server. Try again later.</td>
-</tr>
-<tr>
-<td>503</td>
-<td>Service Unavailable -- We&#39;re temporarily offline for maintenance. Please try again later.</td>
 </tr>
 </tbody></table>
 
       </div>
       <div class="dark-box">
           <div class="lang-selector">
-                <a href="#" data-language-name="shell">shell</a>
-                <a href="#" data-language-name="ruby">ruby</a>
-                <a href="#" data-language-name="python">python</a>
                 <a href="#" data-language-name="javascript">javascript</a>
           </div>
       </div>
